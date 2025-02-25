@@ -1,0 +1,15 @@
+SELECT
+    BC.IDCONTRATO,
+    SUM(BC.VALOR_COBRANCA) AS VALOR_CANCELADO
+FROM 
+    BASE_COBRANCAS BC
+WHERE 
+    BC.DATA_CANCELAMENTO IS NOT NULL -- Parcelas canceladas
+    AND BC.IDCONTRATO NOT IN  (
+        SELECT IDCONTRATO
+        FROM BASE_COBRANCAS
+        WHERE DATA_PAGAMENTO IS NOT NULL -- Exclui contratos com parcelas pagas
+           OR (DATA_PAGAMENTO IS NULL AND DATA_CANCELAMENTO IS NULL) -- Exclui contratos com parcelas em aberto
+    ) 
+GROUP BY 
+    BC.IDCONTRATO;

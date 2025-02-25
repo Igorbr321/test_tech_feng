@@ -19,6 +19,8 @@ Você recebeu três bases de dados em Excel para importar em um banco de dados. 
 
 📈 BI (Business Intelligence) para criação de dashboards e análises
 
+📑 Excel para armazenamento e estruturação inicial dos dados
+
 
 ## 🔄 Fluxo do Projeto
 

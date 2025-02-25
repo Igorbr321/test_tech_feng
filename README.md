@@ -13,7 +13,7 @@ Você recebeu três bases de dados em Excel para importar em um banco de dados. 
 
 🐍 Python para manipulação de dados e conexão com o MySQL
 
-🗄️ MySQL para armazenamento e consulta de dados
+🗄️ MySQL (Workbench) para armazenamento e consulta de dados
 
 📊 Pandas para leitura e manipulação de arquivos .xlsx
 
